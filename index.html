@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link
+      rel = "stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script defer src="script.js"></script>
+    <script defer src="main.js"></script>
+    <title>Movie Vault</title>
+</head>
+<body>
+    <div class="menus">
+        <div class="container">
+            <nav>
+                <a href="index.html">
+                    <div class="logo">
+                        <img src="images/logonew.png" alt="">
+                    </div>
+                </a>
+                <form id="form">
+                    <input type="text" placeholder="Search Movies" id="search">
+                </form>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#movies">Movies</a></li>
+                    <li><a href="tv_show.html">Tv Shows</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <header>
+        <div class="slider-container">
+            <div class="slide active" style="background-image: url(images/img5.jpg);">
+            <div class="slider-content active">
+                <h2 class="movies-title">Extraction 2</h2>
+                <p class="movies_short-details">Back from the brink of death, highly skilled commando 
+                    Tyler Rake takes on another dangerous mission: saving the imprisoned family of a 
+                    ruthless gangster.</p>
+              <div class="m_details">
+                <p class="category">Action</p>
+                <p class="category">Thriller</p>
+                <p class="year">2023</p>
+              </div> 
+              <button type="button"><i class="fas fa-circle-play"></i>Watch Now</button>
+            </div>
+            </div>
+            <div class="slider-container">
+                <div class="slide active" style="background-image: url(images/img6.jpg);">
+                <div class="slider-content">
+                    <h2 class="movies-title">John Wick 4</h2>
+                    <p class="movies_short-details">John Wick uncovers a path to defeating The High Table.
+                         But before he can earn his freedom, Wick must face off against a new enemy with powerful 
+                         alliances across the globe and forces that turn old friends into foes.</p>
+                  <div class="m_details">
+                    <p class="category">Action</p>
+                    <p class="category">Crime</p>
+                    <p class="year">2023</p>
+                  </div> 
+                  <button type="button"><i class="fas fa-circle-play"></i>Watch Now</button>
+                </div>
+                </div>
+            <div class="slider-container">
+                <div class="slide active" style="background-image: url(images/img7.jpg);">
+                <div class="slider-content">
+                    <h2 class="movies-title">Fast X</h2>
+                    <p class="movies_short-details">Toretto must protect his family from Dante Reyes (Momoa)
+                            , who seeks revenge for his father's death and the loss of his family's fortune.</p>
+                  <div class="m_details">
+                    <p class="category">Action</p>
+                    <p class="category">Racing</p>
+                    <p class="year">2023</p>
+                 </div> 
+                   <button type="button"><i class="fas fa-circle-play"></i>Watch Now</button>
+                </div>
+              </div>
+                    <div class="slider-container">
+                        <div class="slide active" style="background-image: url(images/img8.jpg);">
+                        <div class="slider-content">
+                            <h2 class="movies-title">Interstellar</h2>
+                            <p class="movies_short-details">Set in a dystopian future where humanity is embroiled 
+                                in a catastrophic blight and famine, the film follows a group of astronauts who 
+                                travel through a wormhole near Saturn in search of a new home for humankind.</p>
+                          <div class="m_details">
+                            <p class="category">Sci-Fi</p>
+                            <p class="category">Adventure</p>
+                            <p class="year">2023</p>
+                          </div> 
+                          <button type="button"><i class="fas fa-circle-play"></i>Watch Now</button>
+                        </div>
+                        </div>
+        <button class="arrow left-arrow" id="left"><i class="fas fa-arrow-left"></i></button>
+        <button class="arrow right-arrow" id="right"><i class="fas fa-arrow-right"></i></button>
+        </div>
+    </header>
+    <div class="movies-content" id="movies">
+   <div class="container">
+    <h2 class="label">Popular Choices</h2>
+    <div class="movies-details">
+        <!--<div class="movies">
+            <img src="images/img1.jpg" alt="">
+            <p class="movies-title">The Transporter</p>
+            <div class="short-des">
+                <p class="year">2019</p>
+                <p class="rating">0.9</p>
+            </div>
+        </div>-->
+    </div>
+   </div>
+</div>
+
+<!--pagination-->
+<div class="container">
+    <div class="paginations">
+        <ul>
+            <li>Previous</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>Next</li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

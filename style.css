@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Ruda:wght@400;600;700&display=swap');
+
+
+:root{
+    --primary-color:black;
+    --secondary-color:#b1060f;
+    --light-gray-color:#ddd;
+    --white-color:#fff;
+    --green-color:#28b463;
+    --brown-color: #b1060f;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.label{
+    background: var(--secondary-color);
+    color: var(--light-gray-color);
+    padding: 0.5rem;
+    border-left: 7px var(--brown-color) solid;
+}
+
+img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* ---------------menu open-------------- */
+.menus{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 1rem;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo h2{
+  margin-left: 0.3rem;
+  font-size: 10rem;
+  color: var(--white-color);
+}
+.menus .logo img{
+    width: 100px;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+}
+nav ul li a{
+    color: var(--light-gray-color);
+    text-decoration: none;
+    padding: 0.4rem 1rem;
+    border-radius: 2px;
+    font-size: 1.1rem;
+}
+#form input{
+    width: 500px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 0.8rem 1.5rem;
+    font-family: inherit;
+    background: var(--light-gray-color);
+}
+
+
+/* ---------------menu close-------------- */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+    /*background-image: url(images/img1.jpg);*/
+    transition: all 1.5s ease-in-out;
+}
+
+
+.menus.sticky{
+    background: rgba(0,0,0,0.16);
+    color: var(--white-color);
+}
+body{
+    height: 100vh;
+    font-family: "poppins", sans-serif;
+    background: var(--primary-color);
+}
+
+header::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.slider-container{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16) 0 3px 6px rgba(0,0,0,0.23);
+    height: 70vh;
+    width: 70vw;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.slide{
+    opacity: 0;
+    transform: translateX(-25%);
+    height: 100vh;
+    width: 100vw;
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    top:-15vh;
+    left: -15vw;
+    z-index: 1;
+    transition: all 1s ease-in;
+}
+.slide.active{
+    opacity: 1;
+    transform: translateX(-0%);
+}
+.arrow{
+    position: absolute;
+    background: rgba(0,0,0,0.23);
+    color: #fff;
+    padding: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    border-radius: 50%;   
+    z-index: 5;
+}
+.arrow i{
+    font-size: 1.5rem;
+}
+
+.arrow:focus{
+    outline: none;
+}
+.left-arrow{
+    left: 0px;
+}
+.right-arrow{
+    right: 0;
+}
+button{
+    outline: none;
+    border: none;
+}
+.slider-content{
+    position: relative;
+    top: 62%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    padding: 4rem;
+    background-color: transparent;
+    transition: all 0.7s ease-in-out;
+}
+.slider-content.active{
+    transform: translate(-50%,-50%);
+    opacity: 1;
+}
+.slider-content h2{
+    color: #fff;
+    font-size: 3.5rem;
+}
+
+.slider-content .movies_short-details{
+    color: var(--white-color);
+    padding: 1rem;
+    width: 50%;
+    font-size: 1rem;
+}
+
+.slider-content .m_details{
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    margin-left: 1rem;
+}
+
+.m_details .category{
+    color: var(--white-color);
+    background-color: #e47777;
+    padding: 0.4rem;
+    border-radius: 10px;
+}
+.m_details .year{
+    color: var(--white-color);
+    background: var(--green-color);
+    padding: 0.4rem;
+    border-radius: 10px;
+}
+.slider-content button{
+    padding:  0.5rem 1.5rem;
+    border: none;
+    outline: none;
+    margin: 1rem 1rem;
+    background: var(--brown-color);
+    color: var(--white-color);
+    font-family: inherit;
+    font-size: 10rem;
+    display: flex;
+    align-items:center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.slider-content button{
+    margin-right: 1rem;
+    font-size: 1rem;
+}
+
+
+.label{
+    margin: 2rem 0;
+}
+
+.movies-details, 
+.Tv-details {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1.5rem;
+    row-gap: 2rem;
+}
+
+.movies,
+.tvShows{
+    width:325px;
+    height: 500px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.16);
+    cursor: pointer;
+    transition: all 0.4 ease-in;
+    background: var(--secondary-color);
+    position: relative;
+    overflow: hidden;
+}
+.movies,
+.tvShows img{
+    display: block;
+    width: 325px;
+    height: 400px;
+}
+.movies-title {
+    font-size:1rem ;
+    font-family: inherit;
+    margin: 0rem 1rem;
+    position: relative;
+    z-index: 2;
+    color: var(--white-color);
+}
+
+.short-des{
+    display: flex;
+    justify-content: space-between;
+    background: var(--brown-color);
+    color: var(--white-color);
+    margin-top: 1rem;
+    font-weight: 600;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transform: translateY(80%);
+}
+
+.short-des p{
+    padding: 0.5rem 0.5rem;
+}
+
+.movies:hover .short-des,
+ .tvShows:hover .short-des{
+    transform: translateY(0%);
+    transition: all 0.5s ease-in;
+}
+.movies:hover,
+.tvShows:hover {
+    transform: scale(1.05); /* Adjust the scale factor as needed */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adjust the box-shadow on hover */
+}
+
+
+/*-----Pagination-------*/
+.paginations{
+    padding: 4rem 0;
+}
+.paginations ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.paginations ul li{
+    margin: 0 0.7rem;
+    box-shadow: 0 0 10px var(--secondary-color);
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    outline: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: all 0.3s ease-in;
+    color: var(--white-color);
+}
+.paginations ul li:nth-child(1){
+    margin-left: 0;
+}
+.paginations ul li:active{
+    transform: scale(1.5);
+}
